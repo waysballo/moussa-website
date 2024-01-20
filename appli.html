@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToureBoutik</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffcc00; /* Fond de couleur jaune attractif */
+            color: #333;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        #app {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #3498db;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        textarea, input {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ToureBoutik</h1>
+    </header>
+
+    <div id="app">
+        <section>
+            <h2>Nos Produits</h2>
+
+            <!-- Formulaire pour ajouter un produit -->
+            <form>
+                <label for="product-name">Nom du Produit :</label>
+                <input type="text" id="product-name" name="product-name" required><br>
+
+                <label for="product-description">Description du Produit :</label>
+                <textarea id="product-description" name="product-description" rows="4" required></textarea><br>
+
+                <label for="product-price">Prix du Produit :</label>
+                <input type="number" id="product-price" name="product-price" required><br>
+
+                <label for="product-image">Photo du Produit :</label>
+                <input type="file" id="product-image" name="product-image" accept="image/*" required><br>
+
+                <button type="submit">Ajouter le Produit</button>
+            </form>
+
+            <!-- Liste des produits -->
+            <div class="product">
+                <h3>Nom du Produit 1</h3>
+                <p>Description du produit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Prix : $19.99</p>
+                <img src="product1.jpg" alt="Product 1">
+                <button onclick="poserQuestion('Nom du Produit 1')">Poser une Question</button>
+            </div>
+
+            <!-- Ajoutez d'autres produits de manière similaire -->
+        </section>
+
+        <section>
+            <h2>Poser une Question</h2>
+            <form>
+                <label for="question">Votre Question :</label>
+                <textarea id="question" name="question" rows="4" cols="50"></textarea><br>
+                <button type="submit">Envoyer la Question</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2024 ToureBoutik. Tous droits réservés.
+    </footer>
+</body>
+</html>
